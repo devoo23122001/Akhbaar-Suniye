@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+      <title>Description</title>
+    <style>
+            .btn {
+                     background-color: DodgerBlue;
+                     border: none;
+                     color: white;
+                     padding: 20px 20px;
+                     font-size: 16px;
+                     cursor: pointer;
+                 }
+
+
+            .btn:hover {
+                            background-color: RoyalBlue;
+                       }
+            body {
+                text-align:center;
+            }
+            h1 {
+                color:blue;
+            }
+    </style>
+  </head>
+  <body>
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Akhbaar Suniye</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="Akhbaar">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact Us</a>
+      </li>
+           </ul>
+  </div>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
+   <h1 style="color:green;font-size:50px;"> {{title}}</h1><img src={{urlToImage}} alt="Image related to the news"><h2 style="color:black;font-size:40px;">Now Here's a breifing</h2><p style="color:black;font-size:35px;">{{description}}</p><h2 style="color:black;font-size:40px;">For more details, visit </h2>
+<p style="color:black;font-size:32px;"><a href={{url}}>{{url}}</a></p>
+<form action= '/funcy2' method='get'>
+  <h2 style="color:black;font-size:40px;">To hear the news</h2>
+    <button type='submit' name='submit' value='submit'><h3 style="color:black;font-size:32px;">Listen</h3></button>
+</form>
+<form action= '/funcy' method='post'>{% csrf_token %}
+  <h2 style="color:black;font-size:40px;">Move on to Next News</h2>
+    <button type='submit' name='move' value='move'><h3 style="color:black;font-size:32px;">Move</h3></button>
+</form>
+<form action= '/Akhbaar' method='get'>
+   <br><br> <div align="right"><button class="btn" type='submit' name='Home' value='Home'><i class="fa fa-home"></i> </button></div>
+
+</form>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
